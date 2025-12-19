@@ -1,4 +1,4 @@
-# dependencies
+﻿# dependencies
 /node_modules
 # misc
 .DS_Store
@@ -13,3 +13,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+# --- Backups generados por scripts ---
+_backup_*/
+_bak_*/
+*.bak_*
