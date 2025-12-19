@@ -14,29 +14,17 @@ module.exports = {
         66: "66%",
         88: "88%",
         70: "70%",
-        72: "72%",
-        75: "75%",
-        85: "85%",
       },
-      screens: {
-        xxs: "320px",
-        xs: "400px",
-      },
-      boxShadow: {
-        "sidebar-shadow": "0px 2px 4px rgba(5, 8, 16, 0.04)",
-        "sidebar-shadow-dark": "0px 2px 4px rgba(5, 8, 16, 0.20)",
-        "dropdown-shadow": "0px 2px 4px rgba(5, 8, 16, 0.04)",
-        "dropdown-shadow-dark": "0px 2px 4px rgba(5, 8, 16, 0.20)",
-        "card-shadow": "0px 2px 4px rgba(5, 8, 16, 0.04)",
-        "card-shadow-dark": "0px 2px 4px rgba(5, 8, 16, 0.20)",
-        "ui-element-shadow": "0px 2px 4px rgba(5, 8, 16, 0.04)",
-        "ui-element-shadow-dark": "0px 2px 4px rgba(5, 8, 16, 0.20)",
-        "card-shadow-sm": "0px 0px 1px rgba(5, 8, 16, 0.25)",
-        "card-shadow-sm-dark": "0px 0px 1px rgba(5, 8, 16, 0.60)",
-        "card-shadow-md": "0px 0px 2px rgba(5, 8, 16, 0.25)",
-        "card-shadow-md-dark": "0px 0px 2px rgba(5, 8, 16, 0.60)",
-        "card-shadow-lg": "0px 0px 3px rgba(5, 8, 16, 0.25)",
-        "card-shadow-lg-dark": "0px 0px 3px rgba(5, 8, 16, 0.60)",
+      fontSize: {
+        xs: "12px",
+        sm: "14px",
+        base: "16px",
+        lg: "18px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "28px",
+        "4xl": "32px",
+        "5xl": "48px",
       },
       colors: {
         darkblack: {
@@ -47,47 +35,23 @@ module.exports = {
           700: "#151515",
         },
 
-        // ✅ ÉXITO SIEMPRE VERDE (usa clases success-*)
+        // ✅ BANKCO usa "success" como color de marca en toda la UI.
+        // Lo remapeamos a NARANJA (#ec8228).
         success: {
-          50: "#D9FBE6",
-          100: "#B7FFD1",
-          200: "#86EFAC",
-          300: "#4ADE80",
-          400: "#22C55E",
-          500: "#16A34A",
-          600: "#15803D",
-          700: "#166534",
-          800: "#14532D",
-          900: "#052E16",
-          DEFAULT: "#16A34A",
+          50: "#FFF7ED",
+          100: "#FFEDD5",
+          200: "#FED7AA",
+          300: "#ec8228", // <- TU NARANJA (principal)
+          400: "#d47524", // hover un pelín más oscuro
         },
 
-        // ✅ TODO LO "GREEN/EMERALD" (incl. hover: / focus:) PASA A NARANJA #ec8228
-        green: {
-          50: "#FFF7ED",
-          100: "#FFEDD5",
-          200: "#FED7AA",
-          300: "#FDBA74",
-          400: "#FB923C",
-          500: "#ec8228",
-          600: "#EA580C",
-          700: "#C2410C",
-          800: "#9A3412",
-          900: "#7C2D12",
-          DEFAULT: "#ec8228",
-        },
-        emerald: {
-          50: "#FFF7ED",
-          100: "#FFEDD5",
-          200: "#FED7AA",
-          300: "#FDBA74",
-          400: "#FB923C",
-          500: "#ec8228",
-          600: "#EA580C",
-          700: "#C2410C",
-          800: "#9A3412",
-          900: "#7C2D12",
-          DEFAULT: "#ec8228",
+        // ✅ “Éxito real” en VERDE para usarlo cuando quieras (alerts, badges de éxito, etc.)
+        ok: {
+          50: "#D9FBE6",
+          100: "#B7FFD1",
+          200: "#4ADE80",
+          300: "#22C55E",
+          400: "#16A34A",
         },
 
         warning: {
@@ -101,120 +65,22 @@ module.exports = {
           200: "#FF4747",
           300: "#DD3333",
         },
+        bgray: {
+          50: "#FAFAFA",
+          100: "#F7FAFC",
+          200: "#EDF2F7",
+          300: "#E2E8F0",
+          400: "#CBD5E0",
+          500: "#A0AEC0",
+          600: "#718096",
+          700: "#4A5568",
+          800: "#2D3748",
+          900: "#1A202C",
+        },
 
-        bgdark: "#0A0E1A",
-        bgwhite: "#FFFFFF",
-        white: "#FFFFFF",
-        black: "#000000",
-
-        primary: "#ec8228",
-        primaryBase: "#ec8228",
-
-        // Estos eran verdes en tu config: los dejamos naranja para que NO se cuelen verdes
-        primaryNew: "#ec8228",
-        "primary-new": "#ec8228",
-
-        // Naranja global (unificado)
+        // Unificamos naranjas
         orange: "#ec8228",
         othersOrange: "#ec8228",
-
-        // --- el resto de tu config (sin cambios) ---
-        gray: {
-          50: "#F9FAFB",
-          100: "#F3F4F6",
-          200: "#E5E7EB",
-          300: "#D1D5DB",
-          400: "#9CA3AF",
-          500: "#6B7280",
-          600: "#4B5563",
-          700: "#374151",
-          800: "#1F2937",
-          900: "#111827",
-        },
-        slate: {
-          50: "#F8FAFC",
-          100: "#F1F5F9",
-          200: "#E2E8F0",
-          300: "#CBD5E1",
-          400: "#94A3B8",
-          500: "#64748B",
-          600: "#475569",
-          700: "#334155",
-          800: "#1E293B",
-          900: "#0F172A",
-        },
-        zinc: {
-          50: "#FAFAFA",
-          100: "#F4F4F5",
-          200: "#E4E4E7",
-          300: "#D4D4D8",
-          400: "#A1A1AA",
-          500: "#71717A",
-          600: "#52525B",
-          700: "#3F3F46",
-          800: "#27272A",
-          900: "#18181B",
-        },
-        neutral: {
-          50: "#FAFAFA",
-          100: "#F5F5F5",
-          200: "#E5E5E5",
-          300: "#D4D4D4",
-          400: "#A3A3A3",
-          500: "#737373",
-          600: "#525252",
-          700: "#404040",
-          800: "#262626",
-          900: "#171717",
-        },
-        stone: {
-          50: "#FAFAF9",
-          100: "#F5F5F4",
-          200: "#E7E5E4",
-          300: "#D6D3D1",
-          400: "#A8A29E",
-          500: "#78716C",
-          600: "#57534E",
-          700: "#44403C",
-          800: "#292524",
-          900: "#1C1917",
-        },
-        red: {
-          50: "#FEF2F2",
-          100: "#FEE2E2",
-          200: "#FECACA",
-          300: "#FCA5A5",
-          400: "#F87171",
-          500: "#EF4444",
-          600: "#DC2626",
-          700: "#B91C1C",
-          800: "#991B1B",
-          900: "#7F1D1D",
-        },
-        yellow: {
-          50: "#FFFBEB",
-          100: "#FEF3C7",
-          200: "#FDE68A",
-          300: "#FCD34D",
-          400: "#FBBF24",
-          500: "#F59E0B",
-          600: "#D97706",
-          700: "#B45309",
-          800: "#92400E",
-          900: "#78350F",
-        },
-        blue: {
-          50: "#EFF6FF",
-          100: "#DBEAFE",
-          200: "#BFDBFE",
-          300: "#93C5FD",
-          400: "#60A5FA",
-          500: "#3B82F6",
-          600: "#2563EB",
-          700: "#1D4ED8",
-          800: "#1E40AF",
-          900: "#1E3A8A",
-        },
 
         bamber: {
           50: "#FFFBEB",
@@ -222,6 +88,15 @@ module.exports = {
           500: "#F6A723",
         },
         purple: "#936DFF",
+
+        // Antes estaba verde; lo pasamos a naranja suave para eliminar verdes residuales
+        primaryNew: "#FFEDD5",
+        "primary-new": "#FFEDD5",
+
+        // ya lo tenías en naranja
+        primary: "#ec8228",
+        primaryBase: "#ec8228",
+
         portage: "#936DFF",
         basicInterface: "#04091E",
         basicInterface2: "#F5F5F5",
@@ -230,8 +105,19 @@ module.exports = {
         lightGray: "#F3F7F8",
         alertsWarningLight: "#FDE047",
         alertsWarningBase: "#FACC15",
-        alertsErrorLight: "#FF7171",
+        stockColor: "#CBCBCB",
         alertsErrorBase: "#FF4747",
+
+        gray: {
+          50: "#FAFAFA",
+          200: "#EDF2F7",
+          300: "#E2E8F0",
+          600: "#718096",
+          700: "#2A313C",
+          800: "#232B38",
+          900: "#1A202C",
+        },
+
         othersTeal: "#2DD4BF",
         basicSecondary: "#1A202C",
         secondary: {
@@ -242,6 +128,24 @@ module.exports = {
         },
       },
 
+      lineHeight: {
+        "extra-loose": "44.8px",
+        "big-loose": "140%",
+        130: "130%",
+        150: "150%",
+        160: "160%",
+        175: "175%",
+        180: "180%",
+        200: "200%",
+        220: "220%",
+      },
+      letterSpacing: {
+        tight: "-0.96px",
+        40: "-0.4px",
+      },
+      borderRadius: {
+        20: "20px",
+      },
       backgroundImage: {
         "bgc-dark": "url('/assets/images/background/comming-soon-dark.svg')",
         "bgc-light": "url('/assets/images/background/coming-soon-bg.svg')",

@@ -98,7 +98,7 @@ body {
 }
 .progess-bar .bonus-per svg circle {
   fill: none;
-  stroke: #22c55e;
+  stroke: #ec8228;
   stroke-width: 9px;
   stroke-dasharray: 215;
 }
@@ -227,7 +227,7 @@ body {
   .flatpickr-days
   .dayContainer
   .flatpickr-day.today.selected {
-  background: #22c55e;
+  background: #ec8228;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -240,7 +240,7 @@ body {
   .dayContainer
   .flatpickr-day.selected {
   background: none;
-  border: 1px solid #22c55e;
+  border: 1px solid #ec8228;
   border-radius: 8px;
 }
 .dark .fc-daygrid-dot-event .fc-event-title{
@@ -284,7 +284,7 @@ body.modal-open {
   color: white;
 }
 .tab.active .tab-icon {
-  background-color: #22c55e;
+  background-color: #ec8228;
   color: white;
 }
 .tab-pane {
@@ -361,7 +361,7 @@ body.modal-open {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #22c55e;
+  color: #ec8228;
 }
 
 .fc-day-sun .fc-col-header-cell-cushion,
@@ -456,7 +456,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
 }
 
 .fc .fc-daygrid .fc-day-today .fc-daygrid-day-frame {
-  border: 2px solid #b7ffd1 !important;
+  border: 2px solid #FFEDD5 !important;
   background: none !important;
 }
 .fc .fc-day-today {
@@ -535,8 +535,8 @@ button.fc-button.fc-button-primary.fc-prev-button {
   .item-wrapper
   ul
   li.item:hover {
-  fill: #22c55e;
-  color: #22c55e;
+  fill: #ec8228;
+  color: #ec8228;
 }
 :is(.sidebar-wrapper, .sidebar-wrapper-collapse)
   .sidebar-body
@@ -546,7 +546,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
   .item-ico
   svg
   .path-2 {
-  fill: #b7ffd1;
+  fill: #FFEDD5;
 }
 .sidebar-wrapper .sidebar-body .nav-wrapper ul li.item .sub-menu {
   display: none;
@@ -614,8 +614,8 @@ svg
 .item-wrapper
 ul
 li.item:hover {
-  fill: #27DA68;
-  color: #27DA68;
+  fill: #ec8228;
+  color: #ec8228;
 }
 :is(.dark .sidebar-wrapper, .dark .sidebar-wrapper-collapse)
 .sidebar-body
@@ -625,7 +625,7 @@ li.item:hover
 .item-ico
 svg
 .path-2 {
-  fill: #16A34A;
+  fill: #ec8228;
 }
 @media (max-width: 1536px) {
 }
@@ -695,7 +695,7 @@ svg
 }
 .trust-pagination.swiper-pagination.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #22c55e;
+  background-color: #ec8228;
   opacity: 0.2;
   width: 12px;
   height: 12px;
@@ -704,7 +704,7 @@ svg
 
 .trust-pagination.swiper-pagination.swiper-pagination-bullets
   .swiper-pagination-bullet-active {
-  background-color: #22c55e;
+  background-color: #ec8228;
   opacity: 1;
   width: 14px;
   height: 14px;
@@ -715,7 +715,7 @@ svg
   border-radius: 12px;
   border: 1px solid var(--stock-color, #cbcbcb);
   background: var(--white-v-1, #fff);
-  border-bottom: 7px solid #22c55e;
+  border-bottom: 7px solid #ec8228;
 }
 
 .swiper-slide-next > div {
@@ -883,3 +883,57 @@ svg
     overflow: hidden !important;
   }
 }
+/* =========================================================
+   FACTURALDIGITAL - FORZAR ACENTOS EN NARANJA (#ec8228)
+   (porque Bankco trae muchos SVG/CSS hardcodeados en verde)
+   ========================================================= */
+:root{
+  --fd-brand: #ec8228;
+  --fd-brand-soft: #FFEDD5;
+}
+
+/* Sidebar + Header: cambia fills/strokes verdes inline SOLO en esas zonas */
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse, .header-wrapper) svg [fill="#22C55E"],
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse, .header-wrapper) svg [fill="#22c55e"]{
+  fill: var(--fd-brand) !important;
+}
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse, .header-wrapper) svg [stroke="#22C55E"],
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse, .header-wrapper) svg [stroke="#22c55e"]{
+  stroke: var(--fd-brand) !important;
+}
+
+/* Iconos del sidebar (segunda capa) por defecto en naranja */
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse) .item-ico svg .path-2{
+  fill: var(--fd-brand) !important;
+}
+
+/* Hover sidebar (por si algún selector del template te “rebota”) */
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse)
+  .sidebar-body
+  .item-wrapper
+  ul
+  li.item:hover{
+  color: var(--fd-brand) !important;
+  fill: var(--fd-brand) !important;
+}
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse)
+  .sidebar-body
+  .item-wrapper
+  ul
+  li.item:hover
+  .item-ico
+  svg
+  .path-1{
+  fill: var(--fd-brand) !important;
+}
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse)
+  .sidebar-body
+  .item-wrapper
+  ul
+  li.item:hover
+  .item-ico
+  svg
+  .path-2{
+  fill: var(--fd-brand-soft) !important;
+}
+
