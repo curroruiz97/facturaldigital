@@ -3161,33 +3161,18 @@
                       <h3
                         class="text-xl font-bold text-bgray-900 dark:text-white sm:text-2xl"
                       >
-                        Revenue Flow
+                        Mi Evolución
                       </h3>
                       <div class="hidden items-center space-x-[28px] sm:flex">
-                        <div class="flex items-center space-x-2">
-                          <div
-                            class="h-3 w-3 rounded-full bg-warning-300"
-                          ></div>
-                          <span
-                            class="text-sm font-medium text-bgray-700 dark:text-bgray-50"
-                            >Pending
-                          </span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                          <div
-                            class="h-3 w-3 rounded-full bg-success-300"
-                          ></div>
-                          <span
-                            class="text-sm font-medium text-bgray-700 dark:text-bgray-50"
-                            >Signed
-                          </span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                          <div class="h-3 w-3 rounded-full bg-orange"></div>
-                          <span
-                            class="text-sm font-medium text-bgray-700 dark:text-bgray-50"
-                            >Lost
-                          </span>
+                          <div class="flex items-center space-x-2">
+                            <div class="h-3 w-3 rounded-full" style="background:#22C55E"></div>
+                            <span class="text-sm font-medium text-bgray-700 dark:text-bgray-50">Ingresos</span>
+                          </div>
+
+                          <div class="flex items-center space-x-2">
+                            <div class="h-3 w-3 rounded-full" style="background:#EF4444"></div>
+                            <span class="text-sm font-medium text-bgray-700 dark:text-bgray-50">Gastos</span>
+                          </div>
                         </div>
                       </div>
                       <div class="date-filter relative">
@@ -5198,139 +5183,47 @@
         .getElementById("revenueFlow")
         .getContext("2d");
       let month = [
-        "Jan",
+        "Ene",
         "Feb",
         "Mar",
-        "April",
+        "Abr",
         "May",
         "Jun",
-        "July",
-        "Aug",
+        "Jul",
+        "Ago",
         "Sep",
         "Oct",
         "Nov",
-        "Dec",
+        "Dic",
       ];
       let dataSetsLight = [
         {
-          label: "My First Dataset",
-          data: [1, 5, 2, 2, 6, 7, 8, 7, 3, 4, 1, 3],
-          backgroundColor: [
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(250, 204, 21, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-          ],
-          borderWidth: 0,
-          borderRadius: 5,
-        },
-        {
-          label: "My First Dataset 2",
+          label: "Ingresos",
           data: [5, 2, 4, 2, 5, 8, 3, 7, 3, 4, 1, 3],
-          backgroundColor: [
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(255, 120, 75, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-          ],
+          backgroundColor: "rgba(34, 197, 94, 1)",
           borderWidth: 0,
           borderRadius: 5,
         },
         {
-          label: "My First Dataset 3",
+          label: "Gastos",
           data: [2, 5, 3, 2, 5, 6, 9, 7, 3, 4, 1, 3],
-          backgroundColor: [
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(74, 222, 128, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-            "rgba(237, 242, 247, 1)",
-          ],
+          backgroundColor: "rgba(239, 68, 68, 1)",
           borderWidth: 0,
           borderRadius: 5,
         },
       ];
       let dataSetsDark = [
         {
-          label: "My First Dataset",
-          data: [1, 5, 2, 2, 6, 7, 8, 7, 3, 4, 1, 3],
-          backgroundColor: [
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(250, 204, 21, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-          ],
-          borderWidth: 0,
-          borderRadius: 5,
-        },
-        {
-          label: "My First Dataset 2",
+          label: "Ingresos",
           data: [5, 2, 4, 2, 5, 8, 3, 7, 3, 4, 1, 3],
-          backgroundColor: [
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(255, 120, 75, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-          ],
+          backgroundColor: "rgba(34, 197, 94, 1)",
           borderWidth: 0,
           borderRadius: 5,
         },
         {
-          label: "My First Dataset 3",
+          label: "Gastos",
           data: [2, 5, 3, 2, 5, 6, 9, 7, 3, 4, 1, 3],
-          backgroundColor: [
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(74, 222, 128, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-            "rgba(42, 49, 60, 1)",
-          ],
+          backgroundColor: "rgba(239, 68, 68, 1)",
           borderWidth: 0,
           borderRadius: 5,
         },
@@ -5354,7 +5247,7 @@
               },
               ticks: {
                 callback(value) {
-                  return `${value}% `;
+                  return `${value}K`;
                 },
               },
             },
@@ -5490,6 +5383,7 @@
     </script>
   </body>
 </html>
+
 
 
 
